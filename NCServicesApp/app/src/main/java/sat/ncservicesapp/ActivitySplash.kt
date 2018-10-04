@@ -1,5 +1,6 @@
 package sat.ncservicesapp
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -14,9 +15,9 @@ class ActivitySplash : AppCompatActivity() {
         window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
         setContentView(R.layout.activity_splash)
 
-       /* val handler = Handler()
-        handler.postDelayed(Runnable {
-
-        },3000)*/
+        val handler = Handler()
+        handler.postDelayed( {
+            startActivity(Intent(this@ActivitySplash,ActivityHome::class.java))
+        },3000)
     }
 }
